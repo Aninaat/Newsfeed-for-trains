@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KeInform500 - Train News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/brexit.jpg" style="width:100%">
+                <div class="text">UK 'will not pay 100bn euros Brexit bill'
+                </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img class="putin" src="images/trumpputin.jpg" style="width:100%">
+            <div class="text">Trump and Putin 'seek Syria ceasefire'
+            </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/ronaldo.jpg" style="width:100%">
+            <div class="text">Ronaldo scores hattrick against Atletico Madrid
+            </div>
+        </div>
+        
+    <div class="mySlides fade">
+        <img src="images/janetjackson.jpg" style="width:100%">
+            <div class="text">Janet Jackson to resume tour after having son
+            </div>
+        </div>
+    
+    <div class="mySlides fade">
+        <img src="images/eminem.jpg" style="width:100%">
+            <div class="text">Eminem sues NZ ruling party over hit song
+            </div>
+    </div> 
+            <div class="mySlides fade">
+        <img src="images/weather.png" style="width:100%">
+
+    </div>  
+
+    </div>
+
+    <footer>
+        <img src="images/bbclogo.png">
+            <p class="feed">
+            &bull;
+            Merriam-Webster adds "Sheeple" to dictionary, cites Apple users as an example. 
+            &bull; 
+            France election: Le Pen accused of plagiarising Fillon.
+            &bull;
+            Sweden ends ID checks on 'The Bridge' with Denmark.
+            &bull;
+            Beer a better painkiller than acetaminophen, study says.
+            &bull;
+            Orlando Bloom: I would love to be blond.
+            &bull;
+            Russion 'cures' tried on gay people.
+            &bull;
+            UK royals seek $1.6M over Kate's topless photos.
+            </p>
+            <script>
+                var monthName = new Array('January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+                var hourap = new Array(12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+                function showTime(){
+                var dateObj = new Date();
+                var day = dateObj.getDate(), month = dateObj.getMonth(), year = dateObj.getFullYear(), hour = dateObj.getHours(), minutes = (dateObj.getMinutes()<=9?'0'+dateObj.getMinutes():dateObj.getMinutes());
+                var string  = monthName[month]+
+    ' '+day+
+    ', '+year+
+    '<br />'+hourap[hour]+
+    ':'+minutes+
+    ' '+(hour<=11?'am':'pm');
+    var timeDiv = document.getElementById('time');
+    if(timeDiv !== null) {
+        timeDiv.innerHTML = string;
+        timeDiv.setAttribute('datetime',year+'-'+(month+1<=9?'0'+(month+1):month+1)+'-'+day+' '+hour+':'+minutes);
+
+    };
+};
+setInterval(showTime,1000);
+        </script>
+        <time id="time"></time>
+            
+            
+    </footer>
+
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+            }
+            slideIndex++;
+            if (slideIndex> slides.length) {slideIndex = 1} 
+            slides[slideIndex-1].style.display = "block"; 
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+        </script>  
+    </body>
+</html>
